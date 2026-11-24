@@ -1,5 +1,8 @@
- 
-.ani{
+/* =========================================
+   TYPEWRITER ANIMATION
+========================================= */
+
+.ani {
     font-size: 70px;
     min-height: auto;
     color: #f8fafc;
@@ -9,240 +12,224 @@
     border-right: 3px solid #f8fafc;
 }
 
-
-/* Second: Ansh Chouksey */
+/* Ansh Chouksey */
 .newheading h1.ani {
-    animation: typing2 2.5s steps(14) 1.5s forwards,
-               blink 0.8s infinite;
+    animation:
+        typing2 2.5s steps(14) 1.5s forwards,
+        blink 0.8s infinite;
 }
 
 @keyframes typing1 {
-    from {
-        width: 0;
-    }
-    to {
-        width: 8ch;
-    }
+    from { width: 0; }
+    to { width: 8ch; }
 }
 
 @keyframes typing2 {
-    from {
-        width: 0;
-    }
-    to {
-        width: 14ch;
-    }
+    from { width: 0; }
+    to { width: 14ch; }
 }
 
 @keyframes blink {
-    50% {
-        border-color: transparent;
-    }
-}  
-/* =============================================== 
-      //        form filling 
-  ================================================ */
+    50% { border-color: transparent; }
+}
+
+
+/* =========================================
+   FORM
+========================================= */
 
 form {
     height: 100vh;
     display: none;
-
-     background: linear-gradient(135deg, #0f766e, #042f2e);
+    background: linear-gradient(135deg, #0f766e, #042f2e);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-   top: 10px;
-    
+    top: 10px;
 }
-.form{
-      display:flex;
-    flex-direction: column;
-      gap: 20px;
-      width: 50%;
-      height: auto;
-      
-      position: relative;
-      left: 25%;
-      top: 10vh;
-      border: 8px solid black;
-      border-radius: 10px;
-      font-family: serif;
-      font-size: x-large;
-font-weight: bolder;
-      
 
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    height: auto;
+    position: relative;
+    left: 25%;
+    top: 10vh;
+    border: 8px solid black;
+    border-radius: 10px;
+    font-family: serif;
+    font-size: x-large;
+    font-weight: bolder;
 }
-.your-work{
-  
-    
+
+.your-work {
     color: aliceblue;
     background-color: rgb(66, 136, 50);
-
 }
 
-.your-profession{
-   cursor: pointer;
+.your-profession {
+    cursor: pointer;
     background: #000;
     color: aliceblue;
 }
 
-.btns{
-    display: flex !important;
-    flex-direction: row !important;
-   cursor: pointer;
-   
-    color: aliceblue;
-    height: 60px;
+#feedback {
+    background-color: rgb(66, 136, 50);
+    color: black;
+}
+
+textarea::placeholder {
+    color: black;
+}
+
+/* Form button container */
+.form div.btns {
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    gap: 12px;
     margin: 20px;
-  
 }
 
-#btnsub{
-  background: #000;
-  border: solid 2px rgb(179, 30, 30);
+/* Form buttons */
+#btnsub,
+#btnclose {
+    width: 170px;
+    min-height: 48px;
+    margin: 10px;
+    background: #000;
+    border: 2px solid rgb(179, 30, 30);
     border-radius: 12px;
-    width: 170px;
- 
-    margin: 20px;
-       justify-content:center;
+    color: aliceblue;
+    cursor: pointer;
 }
 
-
-#btnclose{
-    width: 170px;
-  background: #000;
-   border: solid 2px rgb(179, 30, 30);
-    border-radius: 12px; 
-     
-     margin: 20px;
-        justify-content: center;
+#btnsub,
+#btnclose {
+    justify-content: center;
 }
 
-#feedback{
-    background-color:  rgb(66, 136, 50);
-    color: black;
-}
-textarea::placeholder{
-    color: black;
-    
-    
-}
-#btnclose:hover,
-#btnsub:hover{
+#btnsub:hover,
+#btnclose:hover {
     background: green;
-     transform: translateY(-5px);
-border-color: rgb(13, 196, 135);
-
-}
-#form-header{
-display: flex;
-justify-content: center;
+    transform: translateY(-5px);
+    border-color: rgb(13, 196, 135);
 }
 
+#form-header {
+    display: flex;
+    justify-content: center;
+}
 
 
-
-/* FORCE LIGHT THEME ON ALL PAGE SECTIONS */
+/* =========================================
+   LIGHT THEME
+========================================= */
 
 body.bg .main,
 body.bg .mainpage,
 body.bg .page,
 body.bg .page2,
 body.bg .lastpage,
-body.bg .lastsec
+body.bg .lastsec,
 body.bg .form {
- background: #F5F7FA;
-    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.3);
-
-accent-color: #64748B;
-  border: 1px solid #E5E7EB;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    background: #F5F7FA;
+    accent-color: #64748B;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     color: #111827 !important;
 }
 
-body.bg .main * ,
-body.bg .mainpage * ,
-body.bg .page * ,
-body.bg .page2 * ,
-body.bg .lastpage * ,
-body.bg .lastsec *
+body.bg .main *,
+body.bg .mainpage *,
+body.bg .page *,
+body.bg .page2 *,
+body.bg .lastpage *,
+body.bg .lastsec *,
 body.bg .form * {
     color: #111827;
-     /* transition: background-color 8.5s ease linear,
-                color 0.5s ease; */
 }
 
 body.bg .header {
     background: whitesmoke !important;
     color: #111827 !important;
-     transition: background-color 0.5s ease,
-                color 0.5s ease;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 body.bg .fakeheader {
     background: whitesmoke !important;
-     transition: background-color 0.5s ease,
-     
-     color 0.5s ease;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
+
 .bg .form,
- .bg .lastsec {
-
-       background: whitesmoke !important;
-  
+.bg .lastsec {
+    background: whitesmoke !important;
 }
 
-/* ALL SIX CARDS */
- .bg .softskill,
- .bg .hardskill,
- .bg .skilltowork,
- .bg .curricular,
-.bg   .hobbies,
+/* Skill cards */
+.bg .softskill,
+.bg .hardskill,
+.bg .skilltowork,
+.bg .curricular,
+.bg .hobbies,
 .bg .strength {
-   
- 
     background: #cf6c15;
-    color:  rgba(0, 0, 0, 0.129);
-
+    color: rgba(0, 0, 0, 0.129);
     border: 2px solid #939fae;
     border-radius: 12px;
 }
 
 
-
 /* =========================================
-   //            PROGRESS BAR 
+   PROGRESS BAR
 ========================================= */
-.progressbar{
-    width: 100%;
-    
-      height: 10px;
-    cursor: pointer;
-      background: #f8fafc;
-      gap: 20px;
 
+.progressbar {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    background: #f8fafc;
+    gap: 20px;
 }
 
-
-
-
-.fill{
+.fill {
     width: 0%;
     height: 10px;
     cursor: pointer;
     background-color: #0f766e;
     accent-color: green;
-transition: width 2s ease-in;
-   
+    transition: width 2s ease-in;
 }
 
-/* Mobile Responsive Form */
+
+/* =========================================
+   GLOBAL RESPONSIVE SETTINGS
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+input,
+select,
+textarea {
+    max-width: 100%;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
 @media screen and (max-width: 768px) {
-    form {
-        width: 90%;
-        margin: 20px auto;
-        padding: 15px;
-    }
 
     input,
     select,
@@ -254,81 +241,44 @@ transition: width 2s ease-in;
     }
 
     button {
-        width: 100%;
+        max-width: 100%;
         padding: 12px;
         font-size: 16px;
     }
-    
-
-}
-/* Global responsive settings */
-* {
-    box-sizing: border-box;
-}
-
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-/* Mobile responsive */
-@media screen and (max-width: 768px) {
-
-    .navbar {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-    }
-
-    .container {
-        width: 100%;
-        padding: 15px;
-    }
-
-    input, select, textarea {
-        max-width: 100%;
-    }
-
-    button {
-        max-width: 100%;
-    }
 }
 
 
-/* =================================
-   MOBILE RESPONSIVE FIXES
-================================= */
+/* =========================================
+   MOBILE LAYOUT
+========================================= */
 
-* {
-    box-sizing: border-box;
-}
-
-html, body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-/* NAVBAR */
 @media (max-width: 600px) {
 
+    /* HEADER: keep all links on one line */
     .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
         height: 60px;
         min-height: 60px;
-        padding: 0 8px;
+        padding: 0 4px;
         display: flex;
-        justify-content: flex-start;
-        gap: 8px;
-        overflow-x: auto;
-        overflow-y: hidden;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 1px;
+        overflow: hidden;
         white-space: nowrap;
+        z-index: 10000;
     }
 
     #name {
-        flex-shrink: 0;
-        font-size: 13px;
-        padding: 6px;
+        flex-shrink: 1;
+        font-size: clamp(8px, 2.5vw, 11px);
+        padding: 4px 2px;
         margin: 0;
+        border-width: 2px;
     }
 
     #home,
@@ -337,11 +287,18 @@ html, body {
     #skills1,
     #contact,
     #form-tofill {
-        flex-shrink: 0;
-        font-size: 12px;
-        padding: 8px 5px;
+        flex-shrink: 1;
+        min-width: 0;
+        font-size: clamp(8px, 2.5vw, 11px);
+        padding: 5px 2px;
         margin: 0;
+        text-align: center;
     }
+
+    .fakeheader {
+        height: 60px;
+    }
+
 
     /* MAIN PAGE */
     .mainpage {
@@ -380,6 +337,7 @@ html, body {
         margin: 15px 0;
     }
 
+
     /* ABOUT SECTION */
     .page2 {
         width: 100%;
@@ -400,6 +358,7 @@ html, body {
         height: 220px;
     }
 
+
     /* SKILLS */
     #skills,
     .box2 {
@@ -407,6 +366,7 @@ html, body {
         grid-template-columns: 1fr !important;
         gap: 18px;
     }
+
 
     /* CONTACT */
     .lastsec {
@@ -423,13 +383,17 @@ html, body {
         width: 100%;
     }
 
-    /* FORM */
+
+    /* FORM: stays below the header */
     form {
         position: fixed;
-        inset: 60px 0 0;
+        top: 60px;
+        left: 0;
+        right: 0;
+        bottom: 0;
         width: 100%;
-        height: calc(100vh - 60px);
         height: calc(100dvh - 60px);
+        max-height: calc(100dvh - 60px);
         margin: 0;
         padding: 15px;
         overflow-y: auto;
@@ -467,21 +431,61 @@ html, body {
         resize: vertical;
     }
 
+
     /* FORM BUTTONS */
-    .form > .btns {
+    .form div.btns {
         display: flex;
         flex-direction: column;
         gap: 12px;
         margin: 10px 0;
     }
 
-    .form button.btns {
+    #btnsub,
+    #btnclose {
         width: 100%;
         min-height: 48px;
-        height: auto;
         margin: 0;
         padding: 12px;
         font-size: 16px;
-        justify-content: center;
+    }
+}
+
+/* TABLET: SCROLLABLE HEADER ONLY */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+
+    .header {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+        align-items: center;
+
+        width: 100%;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+
+        white-space: nowrap;
+        gap: 12px;
+        padding: 0 10px;
+
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-x;
+    }
+
+    .header::-webkit-scrollbar {
+        display: none;
+    }
+
+    #name,
+    #home,
+    #about,
+    #project,
+    #skills1,
+    #contact,
+    #form-tofill {
+        flex-shrink: 0 !important;
+        white-space: nowrap;
+        margin-left: 0;
+        margin-right: 0;
     }
 }

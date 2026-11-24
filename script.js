@@ -214,4 +214,19 @@ progressbar.forEach((entry)=>{
 // ==========================================================
 //    form submission in local Storage
 // ===========================================================
+// Close the form when navigating to another section
+const formElement = document.querySelector("form");
+
+const navigationLinks = document.querySelectorAll(
+    "#home, #about, #project, #skills1, #contact"
+);
+
+navigationLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        if (formElement) {
+            formElement.style.display = "none";
+        }
+    });
+});
+
 
