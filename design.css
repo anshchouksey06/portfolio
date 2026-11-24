@@ -261,23 +261,227 @@ transition: width 2s ease-in;
     
 
 }
-@media screen and (max-width: 480px) {
-    div.btns {
-        display: flex;
+/* Global responsive settings */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
-        gap: 8px;
-        margin-top: 10px;
-        padding: 5px;
+        gap: 12px;
     }
 
-    #btnsub,
-    #btnclose {
-        width: 90px;
-        min-width: 90px;
-        height: 48px;
-        padding: 5px;
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    input, select, textarea {
+        max-width: 100%;
+    }
+
+    button {
+        max-width: 100%;
+    }
+}
+
+
+/* =================================
+   MOBILE RESPONSIVE FIXES
+================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+@media (max-width: 600px) {
+
+    .header {
+        height: 60px;
+        min-height: 60px;
+        padding: 0 8px;
+        display: flex;
+        justify-content: flex-start;
+        gap: 8px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+
+    #name {
+        flex-shrink: 0;
         font-size: 13px;
-        line-height: 16px;
+        padding: 6px;
+        margin: 0;
+    }
+
+    #home,
+    #about,
+    #project,
+    #skills1,
+    #contact,
+    #form-tofill {
+        flex-shrink: 0;
+        font-size: 12px;
+        padding: 8px 5px;
+        margin: 0;
+    }
+
+    /* MAIN PAGE */
+    .mainpage {
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
+        padding: 80px 15px 30px;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+    #photo {
+        width: min(200px, 65vw);
+        height: min(200px, 65vw);
+        margin: 0 auto;
+    }
+
+    .newheading {
+        font-size: 30px;
+    }
+
+    .newheading h1 {
+        font-size: clamp(30px, 9vw, 42px);
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .ani {
+        max-width: 100%;
+        font-size: clamp(25px, 7vw, 40px);
+    }
+
+    #smallpara p {
+        font-size: 17px;
+        margin: 15px 0;
+    }
+
+    /* ABOUT SECTION */
+    .page2 {
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        flex-direction: column;
+        padding: 30px 15px;
+    }
+
+    #mainhead {
+        width: 100%;
+        margin: 0;
+    }
+
+    .rightside {
+        width: 100%;
+        margin: 25px 0;
+        height: 220px;
+    }
+
+    /* SKILLS */
+    #skills,
+    .box2 {
+        width: 100%;
+        grid-template-columns: 1fr !important;
+        gap: 18px;
+    }
+
+    /* CONTACT */
+    .lastsec {
+        width: 100%;
+    }
+
+    .firstinit,
+    .secondinit {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .contactinit {
+        width: 100%;
+    }
+
+    /* FORM */
+    form {
+        position: fixed;
+        inset: 60px 0 0;
+        width: 100%;
+        height: calc(100vh - 60px);
+        height: calc(100dvh - 60px);
+        margin: 0;
+        padding: 15px;
+        overflow-y: auto;
+        z-index: 9998;
+    }
+
+    .form {
+        position: static;
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        margin: 0 auto;
+        padding: 18px;
+        border: 3px solid black;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .form label {
+        font-size: 18px;
+    }
+
+    .your-work,
+    .your-profession,
+    #feedback {
+        width: 100%;
+        min-width: 0;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    #feedback {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    /* FORM BUTTONS */
+    .form > .btns {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 10px 0;
+    }
+
+    .form button.btns {
+        width: 100%;
+        min-height: 48px;
+        height: auto;
+        margin: 0;
+        padding: 12px;
+        font-size: 16px;
+        justify-content: center;
     }
 }
